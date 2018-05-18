@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>MapBoxgl</title>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.6.0/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.6.0/mapbox-gl.js'></script>
+
+<style>
+#map{
+    position: absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    right: 0px;
+}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+var style_object = {
+"version": 7,
+"sources": {
+  "bag": {
+    "type": "vector",
+    "url": "tiles.tilejson"
+  },
+  "stamen": {
+    "type": "raster",   
+    "tiles": ["http://tile.stamen.com/toner/{z}/{x}/{y}.png"],
+    "tileSize": 256
+  }
+},
+"layers":[{
+    "id":"back",
+    "type":"raster",
+    "source":"stamen"
+},{
+    "id":"baglaag0",
+    "source":"bag",
+    "source-layer": "data0",
+    "type":"fill",
+    "paint":{
+        "fill-color":"#2b8cbe",
+        "fill-outline-color":"#000000"
+    }
+},{
+    "id":"baglaag1",
+    "source":"bag",
+    "source-layer": "data1",
+    "type":"fill",
+    "paint":{
+        "fill-color":"#2b8cbe",
+        "fill-outline-color":"#000000"
+    }
+},{
+    "id":"baglaag2",
+    "source":"bag",
+    "source-layer": "data2",
+    "type":"fill",
+    "paint":{
+        "fill-color":"#2b8cbe",
+        "fill-outline-color":"#000000"
+    }
+},{
+    "id":"baglaag3",
+    "source":"bag",
+    "source-layer": "data3",
+    "type":"fill",
+    "paint":{
+        "fill-color":"#2b8cbe",
+        "fill-outline-color":"#000000"
+    }
+},{
+    "id":"baglaag4",
+    "source":"bag",
+    "source-layer": "data4",
+    "type":"fill",
+    "paint":{
+        "fill-color":"#2b8cbe",
+        "fill-outline-color":"#000000"
+    }
+},{
+    "id":"baglaag5",
+    "source":"bag",
+    "source-layer": "data5",
+    "type":"fill",
+    "paint":{
+        "fill-color":"#2b8cbe",
+        "fill-outline-color":"#000000"
+    }
+},{
+    "id":"baglaag6",
+    "source":"bag",
+    "source-layer": "data6",
+    "type":"fill",
+    "paint":{
+        "fill-color":"#2b8cbe",
+        "fill-outline-color":"#000000"
+    }
+},{
+    "id":"baglaag7",
+    "source":"bag",
+    "source-layer": "data7",
+    "type":"fill",
+    "paint":{
+        "fill-color":"#2b8cbe",
+        "fill-outline-color":"#000000"
+    }
+},{
+    "id":"baglaag8",
+    "source":"bag",
+    "source-layer": "data8",
+    "type":"fill",
+    "paint":{
+        "fill-color":"#2b8cbe",
+        "fill-outline-color":"#000000"
+    }
+}]
+}
+var map = new mapboxgl.Map({
+    container: 'map',
+    center: [52.3572,4.8846],
+    zoom: 17,
+    style: style_object,
+    hash: true
+});
+</script>
+</body>
+</html>
